@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelloClient
 {
@@ -10,6 +6,10 @@ namespace HelloClient
     {
         static void Main(string[] args)
         {
+            var proxy = new ServiceReference1.HelloServiceClient();
+            var msg = proxy.GetData(101);
+            Console.WriteLine(msg);
+            Console.ReadKey();
         }
     }
 }
